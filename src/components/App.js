@@ -40,7 +40,7 @@ class App extends React.Component {
     })
     this.setState({
       pets: foundPet
-    })
+    }, () => {console.log(this.state.pets)})
   }
 
   render() {

@@ -1,8 +1,9 @@
 import React from 'react'
 
 class Pet extends React.Component {
+
   render() {
-    console.log(this.props.petObj.isAdopted)
+    console.log(this.props.petObj)
     return (
       <div className="card">
         <div className="content">
@@ -20,11 +21,11 @@ class Pet extends React.Component {
           </div>
         </div>
         <div className="extra content">
-          {this.props.petObj.isAdopted ? 
+          {this.props.petObj.isAdopted ? (
           <button className="ui disabled button">Already adopted</button>
-           : 
+          ) : (
           <button className="ui primary button" onClick={() => this.props.onAdoptPet(this.props.petObj.id)}>Adopt pet</button>
-          }
+          ) }
         </div>
       </div>
     )
